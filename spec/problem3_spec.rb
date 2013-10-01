@@ -1,4 +1,4 @@
-require 'rspec'
+
 
 #first factor the number. then figure out which of the factors are prime. finally, choose the largest prime
   

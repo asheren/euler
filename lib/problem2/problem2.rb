@@ -8,7 +8,7 @@
 
 ## find all the fibonacci sequence numbers 0 to 4 million. then find the even ones. then add those together = solution
 
-class Answer
+class Problem2
 
   def fib
   	a, b, sum = 1,2,3
