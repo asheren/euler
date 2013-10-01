@@ -19,7 +19,7 @@ module Problem2
     end
 
     sum = arr.select { |i| i.even? }.reduce(:+) #the sum is the array, where you then select only the even numbers and add them together
-  	puts sum
+  	
   end
 
   fib(4000000) #sets the limit

@@ -7,9 +7,9 @@ require 'prime'
 
 module Problem3
 
-  def self.prime
-    primes = Prime.prime_division(600851475143)
-    puts primes.last[0]
+  def self.prime(num)
+    primes = Prime.prime_division(num)
+    primes.last[0]
   # def self.prime
 	 #  Prime.each(600851475143) do |prime| #need to factorize? or does this print each prime factor or just each prime number in the number?
 	 #    puts Prime.last 
