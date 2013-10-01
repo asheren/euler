@@ -6,7 +6,7 @@ module Problem1
 
 	def self.multiples(stop_counting)
 
-		(1...stop_counting).find_all { |i| i%3 == 0 || i%5 ==0 }.reduce(:+)
+		(1...stop_counting).find_all { |i| i%3 == 0 || i%5 == 0 }.reduce(:+)
 		#total equals 1 up to stop_counting dot find_all, the block accepts an 
 		# argument i where i mod 5 is 0 or i mod 3 is 0 then chain 
   #   reduce and pass colon plus operator
