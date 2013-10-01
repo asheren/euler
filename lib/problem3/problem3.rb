@@ -3,17 +3,16 @@
 
 #first factor the number. then figure out which of the factors are prime. finally, choose the largest prime
 
-require 'prime' #necessary?  
+require 'prime'
 
-class Answer
+module Problem3
 
-  def initialize()
-  	@prime = Prime.new
-  end
-
-  def solution
-	  Prime.each(600851475143) do |prime| #need to factorize? or does this print each prime factor or just each prime number in the number?
-	    puts Prime.last 
-	  end
+  def self.prime
+    primes = Prime.prime_division(600851475143)
+    puts primes.last[0]
+  # def self.prime
+	 #  Prime.each(600851475143) do |prime| #need to factorize? or does this print each prime factor or just each prime number in the number?
+	 #    puts Prime.last 
+	 #  end
   end
 end
