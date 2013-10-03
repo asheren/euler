@@ -7,13 +7,19 @@
 
 module Problem4
 
-max = 0
-(100..999).each do |a|
-	(a..999).each do |b|
-		product = a*b
-		max = [max, product].max if product.to_s == product.to_s.reverse
-	end
+def self.answer(largest_palendrome_range)
+	max = 0
+  (largest_palendrome_range).each do |a|
+	  (a..largest_palendrome_range.end).each do |b|
+		  product = a*b
+      max = [max, product].max if product.to_s == product.to_s.reverse
+	  end
+  end
+  return max
 end
+#if max is nil then [max,product].max would return an argument error (fixnum with nil failed) so much
+#set max to 0 
+ 
 
-puts "#{max}"
+puts Problem4.answer(100..999)
 end

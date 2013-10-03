@@ -1,9 +1,13 @@
 require 'problem4/problem4'
 
-describe "largest of two digits" do 
-	it { product.max(10...99).should eq 9009 } 
-end
 
-describe "largest of three digits" do	
-	it { largest_palendrome_of_three_digits(100...1000).should eq 906609 } 
+describe "largest palendrome" do	
+
+	it "finds the largest palendrome of 2 digit numbers" do 
+		expect(Problem4.answer(10...99)).to eq  9009
+	end
+
+	it "finds the largest palendrome of 3 digit numbers" do
+		expect(Problem4.answer(100...1000)).to eq 906609 
+	end
 end
