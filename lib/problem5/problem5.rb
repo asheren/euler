@@ -15,13 +15,11 @@
 
 module Problem5
 
-	def self.divided_by(range)
+def self.divided_by(number_range)
+	list = (number_range).inject(:lcm)
+	return list
+end
 
-    [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].inject(:lcm)
-	  #((1<<11)-1).lcm(range).map {|i| i % (range) == 0} #x need to be the starting point and it needs to keep trying numbers
-   									#block of integers (right now x), then if the integers are divided by the range
-   									# using the modulator, where the remainder = 0
-  end
+puts Problem5.divided_by(1..20)
 
- # puts Problem5.divided_by(range) #this isn't right...
 end
