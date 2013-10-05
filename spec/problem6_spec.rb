@@ -24,6 +24,6 @@ describe 'up to 100' do
   end 
 
   it "finds the difference between the sum of the square and the square of the sums" do 
-    expect(Problem6.difference(sum, square)).to eq 25164150 
+    expect(Problem6.difference(1..100)).to eq 25164150 
   end	
 end
