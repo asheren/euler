@@ -7,21 +7,18 @@
 
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 # Find the product abc.
-
+#find all the numbers up to 1000 that are perfect squares; then find which 3 of those can be added to equal 1000
+#then multiply those 3 together = answer
 
 module Problem9
 
-	def self.triplet
-		(1..Float::INFINITY).lazy.flat_map {|z|
-		  (1..z).flat_map {|x|
-		  	(x..z).select {|y|
-		  		x**2 + y**2 == z**2
-		  	}.map {|y|
-		  		[x, y, z]
-		  	}
-		  }
-	  }
+
+	def self.triplet(limit) #finds perfect squares
+		a = (1..limit / 2).to_a.find { |a| (limit * (limit / 2 - a) % (limit-a)).zero?
+		}
+		b = limit * (limit / 2 - a) / (limit - a)
+	  puts a * b * (limit - a - b)
 	end
   
-  p triplet.take_while.force
+   p Problem9.triplet(1000)
 end
